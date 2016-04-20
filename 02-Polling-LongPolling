@@ -1,0 +1,33 @@
+02. Explain polling and long-polling strategies, their pros and cons.
+
+Polling is the process where the computer or controlling device waits for an external device to check for its readiness
+or state, often with low-level hardware. For example, when a printer is connected via a parallel port, the computer
+waits until the printer has received the next character. These processes can be as minute as only reading one bit.
+
+In networks, polling is used to determine which nodes want to access the network. It is also used by routing protocols
+to retrieve routing information, as is the case with EGP (exterior gateway protocol).
+
++ The main advantage of polling is that the CPU determines how often it needs to poll. An interrupt causes the CPU
+  to "stop" and determine what device is interrupting.
++ If the CPU can be late handling the device, then polling prevents the CPU from being interrupted.
+- The problem with polling is that the CPU operates at a much faster speed than most I/O devices. Thus, a CPU can get
+ into a busy wait, checking the device many times, even though the device is very slow.
+- Polling do though require the devices to be quick.
+
+Long polling is a variation of the traditional polling technique.
+With long polling, the client requests information from the server exactly as in normal polling, but with the expectation
+the server may not respond immediately. If the server has no new information for the client when the poll is received,
+instead of sending an empty response, the server holds the request open and waits for response information to become
+available. Once it does have new information, the server immediately sends an HTTP/S response to the client, completing
+the open HTTP/S Request.
+
++ Long polling allows emulating a push mechanism under circumstances where a real push is not possible, such as sites
+  with security policies that require rejection of incoming HTTP/S Requests.
+- The server does not immediately respond but waits until there's new information available.
+
+Links:
+
+https://en.wikipedia.org/wiki/Polling_(computer_science)
+https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/IO/polling.html
+https://www.pubnub.com/blog/2014-12-01-http-long-polling/
+https://en.wikipedia.org/wiki/Push_technology

@@ -1,0 +1,31 @@
+09. Explain the pros & cons of using a Backend as a Service Provider like Firebase.
+
+Explain the pros & cons of using a Backend as a Service Provider like Firebase.
+
++ Firebase is hosted on their server.
++ If your app does run of a centralized DB, and is updated by a lot of users - then it's more than capable of handling the Real-Time
+  data updates between devices.
++ Stored in the cloud so readily available everywhere.
++ Cross Platform API (If you are using this DB with an App)
++ They Host the data. -Meaning if you are storing a lot of data, you don't have to worry about hardware!
++ Autoscaling built-in
++ Can start for free (only need to start paying once we hit 50 connections)
++ Robust APIs for Javascript (including several frameworks like Angular), iOS, and Android
++ Built-in support for authentication services like Facebook, Google, and Twitter
++ Declarative Security Rules model allows us to enforce read/write privileges and data validation throughout the tree
+
+- You can´t modifi everything, because there are several pagages that are made forehand.
+- Unless your app runs of one centralized database updated by a vast quantity of users, it's a major overkill.
+- Storage format is entirely different to that of SQL, (Firebase uses JSON) so you wouldn't be able to migrate that easily.
+- Reporting tools won't be anywhere near the ones of standard SQL.
+- Costs! -Limited to 50 Connections and 100mb of Storage!
+- You don't host the data, Firebase does. And depending on which server you get put on, viewing there up time there seems to be a lot
+  of disruption lately.
+- Need to build indexes manually
+- May need to build "event log" manually as well (in separate sub-tree?)
+- Implementation of REST API could be difficult on embedded platforms
+- Data validation rules do not support complex objects directly (you'd need to validate individual child nodes separately)
+
+
+Link:   http://dba.stackexchange.com/questions/81349/what-are-the-advantages-and-disadvantages-of-firebase-for-a-database/82048
+        https://gist.github.com/jburks725/1ad9d8a14a1351941bc8

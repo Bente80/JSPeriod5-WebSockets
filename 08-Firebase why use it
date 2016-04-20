@@ -1,0 +1,60 @@
+08. What is Backend as a Service, Database as a Service, why would you consider using Firebase in your
+    projects?
+
+Backend as a Service, or BaaS (sometimes referred to as mBaaS) is a cloud computing category that consists of companies that make it
+easier for developers to setup, use and operate a cloud backend for their mobile, tablet and web apps.
+Backend as a Service provides web and mobile app developers with a way to link their applications to backend cloud storage while also
+providing features such as user management, push notifications, and integration with social networking services. These services are
+provided through customized Software Development Kits (SDKs) and Application Programming Interfaces (APIs).
+
+Database as a Service (DBaaS) is a cloud-based approach to the storage and management of structured data.
+DBaaS delivers database functionality similar to what is found in relational database management systems (RDBMSes) such as SQL Server,
+MySQL and Oracle. Being cloud-based, on the other hand, DBaaS provides a flexible, scalable, on-demand platform that's oriented toward
+self-service and easy management, particularly in terms of provisioning a business' own environment. DBaaS products typically provide
+enough monitoring capabilities to track performance and usage and to alert users to potential issues. The products can also generate
+at least some degree of data analytics.
+
+Firebase is an API to store and sync data in realtime, helping developers build realtime apps.
+You can save data, update data, and listen for data changes in realtime with only a few lines of code.
+Firebase is a realtime database, simular to nosql, which provides an API that allows developers to store and sync data across multiple
+clients. The data is saved as standard JSON objects.
+The Firebase company provides client libraries that enable integration with Android, iOS, JavaScript, Java, Objective-C and Node.js
+applications. The database is also accessible through a REST API and bindings for several JavaScript frameworks such as AngularJS,
+React, Ember.js and Backbone.js. The REST API uses the Server-Sent Events protocol, which is an API for creating HTTP connections for
+receiving push notifications from a server.
+Firebase also has safety and security built in.
+Firebase is a service, you create an account, and log in. This means that you dont have to care about scalability.
+
+The reason to use firebase are:
+
+Firebase provides three key services that enable you to build rich, full-featured applications using just client-side code:
+
+1. A realtime data API. Our API replaces the need for most backend databases and server code by handling the heavy lifting of data storage
+   and synchronization.
+
+2. User management and authentication. Our Simple Login service handles your user management and authentication needs out-of-the-box. Or,
+   if you prefer to manage users yourself, you can maintain complete control using Custom Login.
+
+3. Hosting. With hosting, you can deploy your static website to the internet with a single command.
+
+* All of these services are built for security, reliability, and scale, so you can deploy your applications with confidence.
+
+Links:
+http://www.baasbox.com/what-is-backend-as-a-service/
+http://whatis.techtarget.com/definition/Database-as-a-Service-DBaaS
+https://en.wikipedia.org/wiki/Firebase
+https://fronter.com/cphbusiness/links/files.phtml/2126339921$296954025$/Arkiv/4.+semester/Elective+subjects+-+Valgfag+spring+2016/MEAN/Period-5+_prcent_28Web+Sockets_prcent_29/Firebase.pdf
+https://www.npmjs.com/package/firebase
+
+
+
+
+
+
+
+
+
+
+
+
+Firebase also have authentication and ... out of the box.
