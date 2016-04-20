@@ -35,7 +35,7 @@
        Angular’s ng-init directive: */
     <div ng-controller="NeighborhoodController" ng-init="init(neighborhood.value)">
 
-/** 7. This directive binds our weather div to a function called ‘init’ in our controller, which is executed once for each neighborhood. */
+    /** 7. This directive binds our weather div to a function called ‘init’ in our controller, which is executed once for each neighborhood./*
     $scope.init = function(neighborhood) {
 
 /** 8. Inside this ‘init’ function, we’ll create a Firebase reference for each neighborhood. Then we’ll call the checkWeather() function

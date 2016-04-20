@@ -1,32 +1,25 @@
-/**
- * Created by Bente on 19-04-2016.
- *
- * 06. Explain and demonstrate the process of WebSocket communication - From connecting client to server, through sending messages,
- *     to closing connection.
- */
+//Another example:
 
+// Create SocketIO instance, connect
+    var socket = new io.Socket('localhost',{
+        port: 8080
+    });
+socket.connect();
 
-/**
- * Using the Google Chrome Developer Tools, developers can inspect the WebSocket handshake as well as the WebSocket frames.[6]
-*
-*Example:
-*
- *Client request (just like in HTTP, each line ends with \r\n and there must be an extra blank line at the end):
- */
+// Add a connect listener
+socket.on('connect',function() {
+    console.log('Client has connected to the server!');
+});
+// Add a connect listener
+socket.on('message',function(data) {
+    console.log('Received a message from the server!',data);
+});
+// Add a disconnect listener
+socket.on('disconnect',function() {
+    console.log('The client has disconnected!');
+});
 
-GET /chat HTTP/1.1
-Host: server.example.com
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
-Sec-WebSocket-Protocol: chat, superchat
-Sec-WebSocket-Version: 13
-Origin: http://example.com
-
-    /**    Server response: */
-
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
-Sec-WebSocket-Protocol: chat
+// Sends a message to the server via sockets
+function sendMessageToServer(message) {
+    socket.send(message);
+}
