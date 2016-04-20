@@ -28,7 +28,13 @@ before using it. Thereby sending a no-cache value thus instructs a browser or pr
 based on "freshness criteria" of the cache content.
 
 The main point of this question is that because the HTTP protocol is so big and it takes a lot of information with it 
-to make each call it is slove.
+to make each call it is slow.
+In other words the protocol contains a lot of information - information that is a overhead.
+One of the core principles of the HTTP protocol, is the Request - Response model. A client sends a request to the server
+and the server then comes with a appropriate response. This is a great construction for a traditional website where the
+client do an action and gets a response back. Since HTTP is stateless, every single request must have some information
+about what it want to do, where it should be done and who is doing it and so on. All this information that needs to be
+send every time, adds up to alot of bytes which affects the speed of the request - response time.
 
  Links:
  http://whatis.techtarget.com/definition/hard-real-time-system-immediate-real-time-system

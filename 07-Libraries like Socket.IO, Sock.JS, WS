@@ -4,7 +4,9 @@
 Socket.io can be used as a wrapper for WebSocket, but provides many more features, including broadcasting to multiple sockets,
 storing data associated with each client, and asynchronous I/O. It allowes you to send/emit messages by specifying an event name.
 Furtheremore it simplifies the usage of WebSockets, and provides failovers to other protocols in the event that WebSockets
-are not supported on the browser or server.
+are not supported on the browser or server. Ex. It will test Websocket compatibility and if it's not supported it will use Adobe
+Flash, AJAX, or an iFrame. Socket.io supports a very large set of browsers: Internet Explorer 5.5+, Safari 3+, Google Chrome 4+,
+Firefox 3+, Opera 10.61+, iPhone Safari, iPad Safari, Android WebKit & WebOs WebKit.
 
 SockJS is a JavaScript library (for browsers) that provides a WebSocket-like object. SockJS gives you a coherent, cross-browser,
 Javascript API which creates a low latency, full duplex, cross-domain communication channel between the browser and the web server,
@@ -21,6 +23,7 @@ includes fallbacks.
 
 Links:  http://stackoverflow.com/questions/10112178/differences-between-socket-io-and-websockets
         https://en.wikipedia.org/wiki/Socket.IO
+        http://code.tutsplus.com/tutorials/using-nodejs-and-websockets-to-build-a-chat-service--net-34482
         https://www.npmjs.com/package/sockjs
         http://www.html5rocks.com/en/tutorials/websockets/basics/
         https://github.com/websockets/ws

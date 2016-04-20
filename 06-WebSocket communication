@@ -1,7 +1,7 @@
 06. Explain and demonstrate the process of WebSocket communication - From connecting client to server, through sending messages,
     to closing connection.
 
-Using the Google Chrome Developer Tools, developers can inspect the WebSocket handshake as well as the WebSocket frames.[6]
+Using the Google Chrome Developer Tools, developers can inspect the WebSocket handshake as well as the WebSocket frames.
 
 Short Example:
 
@@ -24,7 +24,33 @@ Connection: Upgrade
 Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
 Sec-WebSocket-Protocol: chat
 
+Another example:
+// Create SocketIO instance, connect
+var socket = new io.Socket('localhost',{
+    port: 8080
+});
+socket.connect();
+
+// Add a connect listener
+socket.on('connect',function() {
+    console.log('Client has connected to the server!');
+});
+// Add a connect listener
+socket.on('message',function(data) {
+    console.log('Received a message from the server!',data);
+});
+// Add a disconnect listener
+socket.on('disconnect',function() {
+    console.log('The client has disconnected!');
+});
+
+// Sends a message to the server via sockets
+function sendMessageToServer(message) {
+    socket.send(message);
+}
+
 For a longer example look at my github repository:
 JSPeriod5-WebSocketChat3 -  https://github.com/Bente80/JS-05-WebSocketChat/blob/master/routes/socket.js
+
 
 Links:  https://en.wikipedia.org/wiki/WebSocket

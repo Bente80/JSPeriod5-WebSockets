@@ -1,7 +1,16 @@
 11. Explain and demonstrate the difference between the simple chat system in your own WebSocket + Node.js
     backend vs. Firebase.
 
-The difference between the simple chat system in your own WebSocket + Node.js backend vs. Firebase.....
+The difference between the simple chat system in your own WebSocket + Node.js backend vs. Firebase is that you in firebase on top you
+can store the data on an online database very easialy. Furthermore using firebase does´nt require the app to have a backend, as the
+data is stored in there. With Firebase you are able to receive many little messages instead of downloading big chunks of data (this
+improves reactiveness of you app!)
+
+As you can see we have the whole backend via Express setup with our own chat system - and via socket.io we create the socket connection
+for communication. We can then store the data in a MongoDB for persistence.
+With a threeway databinding chat it is only the angular frontend and all backend and persistence is done via Firebase.
 
 You can see a simple chat system if you look at my github link:
 JSPeriod5-WebSocketChat3 -     https://github.com/Bente80/JS-05-WebSocketChat
+
+Link:   https://www.quora.com/How-does-firebase-work
